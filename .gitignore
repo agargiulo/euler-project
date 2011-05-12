@@ -1,2 +1,2 @@
-bin/ 	#Ignore any files in the bin directory
+bin/* 	#Ignore any files in the bin directory
 *.class #Ignore any class files
