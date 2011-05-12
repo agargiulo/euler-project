@@ -30,8 +30,6 @@ public class Problem7
         {
             currentPrime = getNextPrime(currentPrime);
             primes.add(currentPrime);
-            System.out.println(String.format("CurPrime: %s; index: %s",
-                    currentPrime, primes.size()));
         }
         System.out.println(currentPrime);
     }
