@@ -1,20 +1,71 @@
+import java.util.ArrayList;
+
 /**
  * @author Anthony Gargiulo
- * @version 0.1
- * Euler Project
- *
- * Problem7.java
- * ---------
+ * @version 0.5
+ *          Euler Project
+ *          Problem 7
+ *          ---------
+ *          By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we
+ *          can see that the 6th prime is 13.
+ *          What is the 10001st prime number?
  */
 
-public class Problem7 {
+public class Problem7
+{
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) 
-	{
-	    
-	}
+    /**
+     * @param args
+     */
+    public static void main(String[] args)
+    {
+        long currentPrime = 2;
+        int primeIndex = 1;
+        for (; primeIndex <= 10001; primeIndex++)
+        {
+            currentPrime = getNextPrime(currentPrime);
+        }
+        System.out.println(currentPrime);
+    }
 
+    /**
+     * @param number
+     * @return the list of factors
+     */
+    private static ArrayList<Long> getFactors(long number)
+    {
+        ArrayList<Long> factors = new ArrayList<Long>(
+                (int) Math.sqrt(number) / 2);
+        for (long f = 1; f < Math.sqrt(number); f++)
+        {
+            if (number % f == 0)
+            {
+                factors.add(f);
+            }
+        }
+        return factors;
+    }
+
+    /**
+     * @param currentPrime
+     * @return the next prime, after <code>currentPrime</code>
+     */
+    private static long getNextPrime(long currentPrime)
+    {
+        long nextPrime = currentPrime + 1;
+        while (!isPrime(nextPrime))
+        {
+            nextPrime++;
+        }
+        return nextPrime;
+    }
+
+    /**
+     * @param number
+     * @return true if the number is prime or false if it is not
+     */
+    private static boolean isPrime(long number)
+    {
+        return getFactors(number).size() <= 1;
+    }
 }
