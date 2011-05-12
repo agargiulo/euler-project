@@ -77,9 +77,9 @@ public class Problem8
     private static int getProduct(String substring)
     {
         int product = 1;
-        for (char c : substring.toCharArray())
+        for (int i = 0; i < substring.length(); i++)
         {
-            product *= Character.valueOf(c);
+            product *= Integer.parseInt(substring.substring(i, i + 1));
         }
         return product;
     }
