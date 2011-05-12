@@ -15,15 +15,23 @@ public class Problem7
 {
 
     /**
+     * 
+     */
+    private static final ArrayList<Long> primes = new ArrayList<Long>(10001);
+
+    /**
      * @param args
      */
     public static void main(String[] args)
     {
         long currentPrime = 2;
-        int primeIndex = 1;
-        for (; primeIndex <= 10001; primeIndex++)
+        primes.add(currentPrime);
+        while (primes.size() != 10001)
         {
             currentPrime = getNextPrime(currentPrime);
+            primes.add(currentPrime);
+            System.out.println(String.format("CurPrime: %s; index: %s",
+                    currentPrime, primes.size()));
         }
         System.out.println(currentPrime);
     }
@@ -43,6 +51,12 @@ public class Problem7
                 factors.add(f);
             }
         }
+        ArrayList<Long> factors2 = new ArrayList<Long>();
+        for (long l : factors)
+        {
+            factors2.add(number / l);
+        }
+        factors.addAll(factors2);
         return factors;
     }
 
@@ -66,6 +80,6 @@ public class Problem7
      */
     private static boolean isPrime(long number)
     {
-        return getFactors(number).size() <= 1;
+        return getFactors(number).size() <= 2;
     }
 }
