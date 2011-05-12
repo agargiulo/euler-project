@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 /**
  * @author Anthony Gargiulo
- * @version 0.5
+ * @version 1.0
  *          Euler Project
  *          Problem 7
  *          ---------
@@ -31,7 +31,7 @@ public class Problem7
             currentPrime = getNextPrime(currentPrime);
             primes.add(currentPrime);
         }
-        System.out.println(currentPrime);
+        System.out.println("The 10001st prime is: " + currentPrime);
     }
 
     /**
@@ -42,7 +42,7 @@ public class Problem7
     {
         ArrayList<Long> factors = new ArrayList<Long>(
                 (int) Math.sqrt(number) / 2);
-        for (long f = 1; f < Math.sqrt(number); f++)
+        for (long f = 1; f <= Math.sqrt(number); f++)
         {
             if (number % f == 0)
             {
@@ -55,6 +55,7 @@ public class Problem7
             factors2.add(number / l);
         }
         factors.addAll(factors2);
+        // System.out.println(number + ": " + factors);
         return factors;
     }
 
