@@ -20,11 +20,11 @@ public class Problem10
     {
         ArrayList<Long> primes = new ArrayList<Long>();
         primes.add(2l);
-        long curPrime = Problem7.getNextPrime(2l);
+        long curPrime = PrimeGen.getNextPrime(2l);
         while (curPrime < 2000000l)
         {
             primes.add(curPrime);
-            curPrime = Problem7.getNextPrime(curPrime);
+            curPrime = PrimeGen.getNextPrime(curPrime);
         }
         long sum = 0;
         for (long l : primes)

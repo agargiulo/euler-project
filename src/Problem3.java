@@ -22,7 +22,7 @@ public class Problem3
         ArrayList<Long> factors = getFactors(compNum);
         int offset = 1;
         long max = factors.get(factors.size() - offset);
-        while (!isPrime(max))
+        while (!PrimeGen.isPrime(max))
         {
             offset++;
             max = factors.get(factors.size() - offset);
@@ -46,14 +46,5 @@ public class Problem3
             }
         }
         return factors;
-    }
-
-    /**
-     * @param number
-     * @return true if the number is prime or false if it is not
-     */
-    private static boolean isPrime(long number)
-    {
-        return getFactors(number).size() <= 1;
     }
 }
