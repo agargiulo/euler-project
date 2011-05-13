@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /**
  * @author Anthony Gargiulo
  * @version 0.1
@@ -16,6 +18,19 @@ public class Problem10
      */
     public static void main(String[] args)
     {
+        ArrayList<Long> primes = new ArrayList<Long>();
+        primes.add(2l);
+        long curPrime = Problem7.getNextPrime(2l);
+        while (curPrime < 2000000l)
+        {
+            primes.add(curPrime);
+            curPrime = Problem7.getNextPrime(curPrime);
+        }
+        long sum = 0;
+        for (long l : primes)
+        {
+            sum += l;
+        }
+        System.out.println(sum);
     }
-
 }
