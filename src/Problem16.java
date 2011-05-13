@@ -18,7 +18,7 @@ public class Problem16
      */
     public static void main(String[] args)
     {
-        BigInteger largeNumber = BigInteger.valueOf(2l);
+        BigInteger largeNumber = BigInteger.valueOf(2L);
         largeNumber = largeNumber.pow(1000);
         String num = largeNumber.toString();
         long sum = 0;
