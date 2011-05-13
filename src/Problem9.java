@@ -21,8 +21,32 @@ public class Problem9
      */
     public static void main(String[] args)
     {
-        // TODO Auto-generated method stub
-
+        int upperBound = 100;
+        int a = 2;
+        int b = 1;
+        while (true)
+        {
+            double c = Math.sqrt(a * a + b * b);
+            if (c != (int) c)
+            {
+                b++;
+                if (b + 1 == a)
+                {
+                    continue;
+                } else
+                {
+                    b = 1;
+                    a++;
+                    if (a == upperBound)
+                    {
+                        break;
+                    }
+                }
+            } else
+            {
+                System.out.println(String.format("a: %s | b: %s | c: %s", a, b,
+                        Math.sqrt(a * a + b * b)));
+            }
+        }
     }
-
 }
