@@ -21,7 +21,6 @@ public class Problem16
         BigInteger largeNumber = BigInteger.valueOf(2l);
         largeNumber = largeNumber.pow(1000);
         String num = largeNumber.toString();
-        System.out.println(num);
         long sum = 0;
         for (int i = 0; i < num.length(); i++)
         {
