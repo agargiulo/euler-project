@@ -1,11 +1,12 @@
-java $file  4.17s user 0.11s system 104% cpu 4.100 total
+Fri May 13 04:15:19 EDT 2011
+java $file  4.16s user 0.13s system 105% cpu 4.079 total
 java $file  0.14s user 0.06s system 98% cpu 0.209 total
-java $file  0.15s user 0.05s system 98% cpu 0.201 total
-java $file  0.14s user 0.06s system 98% cpu 0.203 total
-java $file  0.25s user 0.07s system 104% cpu 0.301 total
-java $file  1.43s user 0.51s system 113% cpu 1.712 total
-java $file  0.36s user 0.06s system 103% cpu 0.414 total
-java $file  0.13s user 0.07s system 98% cpu 0.203 total
-java $file  0.30s user 0.08s system 118% cpu 0.327 total
-java $file  0.18s user 0.05s system 101% cpu 0.237 total
+java $file  0.14s user 0.05s system 98% cpu 0.202 total
+java $file  0.15s user 0.05s system 98% cpu 0.205 total
+java $file  0.25s user 0.06s system 104% cpu 0.299 total
+java $file  1.48s user 0.51s system 114% cpu 1.752 total
+java $file  0.36s user 0.06s system 102% cpu 0.413 total
+java $file  0.14s user 0.06s system 98% cpu 0.201 total
+java $file  0.32s user 0.06s system 117% cpu 0.328 total
+java $file  0.18s user 0.06s system 101% cpu 0.236 total
 java $file  0.14s user 0.06s system 98% cpu 0.202 total
