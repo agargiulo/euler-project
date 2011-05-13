@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 /**
  * @author Anthony Gargiulo
- * @version 1.0
+ * @version 1.5
  *          Euler Project
  *          Problem 7
  *          ---------

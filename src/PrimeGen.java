@@ -1,6 +1,6 @@
 /**
  * @author Anthony Gargiulo
- * @version 0.1
+ * @version 1.2
  *          Euler Project
  *          PrimeGen.java
  *          ---------
