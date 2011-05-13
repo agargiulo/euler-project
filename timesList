@@ -1,0 +1,11 @@
+java $file  4.17s user 0.11s system 104% cpu 4.100 total
+java $file  0.14s user 0.06s system 98% cpu 0.209 total
+java $file  0.15s user 0.05s system 98% cpu 0.201 total
+java $file  0.14s user 0.06s system 98% cpu 0.203 total
+java $file  0.25s user 0.07s system 104% cpu 0.301 total
+java $file  1.43s user 0.51s system 113% cpu 1.712 total
+java $file  0.36s user 0.06s system 103% cpu 0.414 total
+java $file  0.13s user 0.07s system 98% cpu 0.203 total
+java $file  0.30s user 0.08s system 118% cpu 0.327 total
+java $file  0.18s user 0.05s system 101% cpu 0.237 total
+java $file  0.14s user 0.06s system 98% cpu 0.202 total
