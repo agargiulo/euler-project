@@ -20,6 +20,20 @@ public class Problem7
     private static final ArrayList<Long> primes = new ArrayList<Long>(10001);
 
     /**
+     * @param currentPrime
+     * @return the next prime, after <code>currentPrime</code>
+     */
+    public static long getNextPrime(long currentPrime)
+    {
+        long nextPrime = currentPrime + 1;
+        while (!isPrime(nextPrime))
+        {
+            nextPrime++;
+        }
+        return nextPrime;
+    }
+
+    /**
      * @param args
      */
     public static void main(String[] args)
@@ -57,20 +71,6 @@ public class Problem7
         factors.addAll(factors2);
         // System.out.println(number + ": " + factors);
         return factors;
-    }
-
-    /**
-     * @param currentPrime
-     * @return the next prime, after <code>currentPrime</code>
-     */
-    private static long getNextPrime(long currentPrime)
-    {
-        long nextPrime = currentPrime + 1;
-        while (!isPrime(nextPrime))
-        {
-            nextPrime++;
-        }
-        return nextPrime;
     }
 
     /**
