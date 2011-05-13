@@ -1,0 +1,8 @@
+#!/bin/zsh
+date
+cd bin
+for file in Problem*.class;do
+	echo $file:
+	file=${file:r}
+	time java $file
+done
