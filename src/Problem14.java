@@ -1,6 +1,3 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintStream;
 import java.util.ArrayList;
 
 /**
@@ -33,13 +30,6 @@ public class Problem14
      */
     public static void main(String[] args)
     {
-        try
-        {
-            System.setOut(new PrintStream(new File("log.log")));
-        } catch (FileNotFoundException e)
-        {
-            e.printStackTrace();
-        }
         int maxChainLength = 0;
         int maxChainStart = 0;
         int chainLength = 0;
@@ -48,8 +38,10 @@ public class Problem14
         for (int i = 999999; i > 0; i--)
         {
             chain = getChain(i);
-            System.out.println(chain);
             chainLength = chain.size();
+            System.out.println(String.format(
+                    "Max length so far: %s | chainLength: %s | seed: %s",
+                    maxChainLength, chainLength, i));
             if (chainLength >= maxChainLength)
             {
                 maxChainStart = i;
