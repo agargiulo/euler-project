@@ -1,6 +1,8 @@
+import java.util.ArrayList;
+
 /**
  * @author Anthony Gargiulo
- * @version 0.1
+ * @version 0.5
  *          Euler Project
  *          Problem 14
  *          ---------
@@ -31,32 +33,34 @@ public class Problem14
         int maxChainLength = 0;
         int maxChainStart = 0;
         int chainLength = 0;
+
         for (int i = 999999; i > 0; i--)
         {
-            chainLength = getChainLength(i);
-            if (chainLength > maxChainLength)
+            chainLength = getChain(i).size();
+            if (chainLength >= maxChainLength)
             {
                 maxChainStart = i;
                 maxChainLength = chainLength;
             }
         }
-        System.out.println(maxChainStart);
+        System.out.println(maxChainStart + ", " + maxChainLength);
     }
 
     /**
      * @param start
-     * @return
+     * @return the length of the chain starting from <code>start</code>
      */
-    private static int getChainLength(int start)
+    private static ArrayList<Integer> getChain(int start)
     {
-        int length = 0;
+        ArrayList<Integer> chain = new ArrayList<Integer>();
+        chain.add(start);
         int curNum = start;
         while (curNum > 1)
         {
             curNum = getNext(curNum);
-            length++;
+            chain.add(curNum);
         }
-        return length;
+        return chain;
     }
 
     /**
@@ -64,7 +68,7 @@ public class Problem14
      * n → 3n + 1 (n is odd)
      * 
      * @param curNum
-     * @return
+     * @return the next number in the chain
      */
     private static int getNext(int curNum)
     {
