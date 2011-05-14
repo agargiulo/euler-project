@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Collections;
 
 /**
  * @author Anthony Gargiulo
@@ -31,38 +30,33 @@ public class Problem14
      */
     public static void main(String[] args)
     {
-        int maxChainLength = 0;
-        int maxChainStart = 0;
-        int chainLength = 0;
-        ArrayList<Integer> chain;
+        long maxChainLength = 0;
+        long maxChainStart = 0;
+        long chainLength = 0;
+        ArrayList<Long> chain;
 
-        for (int i = 999999; i > 0; i--)
+        for (long i = 999999; i > 0; i--)
         {
             chain = getChain(i);
             chainLength = chain.size();
-            String out = String.format(
-                    "Max length so far: %s\t|\tchainLength:\t%s\t|\tseed:\t%s",
-                    maxChainLength, chainLength, i);
             if (chainLength >= maxChainLength)
             {
-				out += "\t* New max is " + chainLength;
                 maxChainStart = i;
                 maxChainLength = chainLength;
             }
-			System.out.println(out);
         }
-        System.err.println(maxChainStart + ", " + maxChainLength);
+        System.out.println(maxChainStart + ", " + maxChainLength);
     }
 
     /**
      * @param start
      * @return the length of the chain starting from <code>start</code>
      */
-    private static ArrayList<Integer> getChain(int start)
+    private static ArrayList<Long> getChain(long start)
     {
-        ArrayList<Integer> chain = new ArrayList<Integer>();
+        ArrayList<Long> chain = new ArrayList<Long>();
         chain.add(start);
-        int curNum = start;
+        long curNum = start;
         while (curNum > 1)
         {
             curNum = getNext(curNum);
@@ -78,7 +72,7 @@ public class Problem14
      * @param curNum
      * @return the next number in the chain
      */
-    private static int getNext(int curNum)
+    private static long getNext(long curNum)
     {
         if (curNum % 2 == 0)
         {
