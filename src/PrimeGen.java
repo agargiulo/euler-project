@@ -70,4 +70,20 @@ public class PrimeGen
             return true;
         }
     }
+
+    /**
+     * testing stuff
+     * 
+     * @param args
+     */
+    public static void main(String[] args)
+    {
+        long initPrime = 2;
+        System.out.println(initPrime);
+        for (int i = 0; i < 2000000; i++)
+        {
+            initPrime = getNextPrime(initPrime);
+            System.out.println(initPrime);
+        }
+    }
 }
