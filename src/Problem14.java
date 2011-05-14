@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * @author Anthony Gargiulo
@@ -39,14 +40,16 @@ public class Problem14
         {
             chain = getChain(i);
             chainLength = chain.size();
-            System.out.println(String.format(
-                    "Max length so far: %s | chainLength: %s | seed: %s",
-                    maxChainLength, chainLength, i));
+            String out = String.format(
+                    "Max length so far: %s\t|\tchainLength:\t%s\t|\tseed:\t%s",
+                    maxChainLength, chainLength, i);
             if (chainLength >= maxChainLength)
             {
+				out += "\t* New max is " + chainLength;
                 maxChainStart = i;
                 maxChainLength = chainLength;
             }
+			System.out.println(out);
         }
         System.err.println(maxChainStart + ", " + maxChainLength);
     }
