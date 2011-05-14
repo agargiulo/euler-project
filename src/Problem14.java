@@ -1,3 +1,6 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
 import java.util.ArrayList;
 
 /**
@@ -30,20 +33,30 @@ public class Problem14
      */
     public static void main(String[] args)
     {
+        try
+        {
+            System.setOut(new PrintStream(new File("log.log")));
+        } catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
         int maxChainLength = 0;
         int maxChainStart = 0;
         int chainLength = 0;
+        ArrayList<Integer> chain;
 
         for (int i = 999999; i > 0; i--)
         {
-            chainLength = getChain(i).size();
+            chain = getChain(i);
+            System.out.println(chain);
+            chainLength = chain.size();
             if (chainLength >= maxChainLength)
             {
                 maxChainStart = i;
                 maxChainLength = chainLength;
             }
         }
-        System.out.println(maxChainStart + ", " + maxChainLength);
+        System.err.println(maxChainStart + ", " + maxChainLength);
     }
 
     /**
