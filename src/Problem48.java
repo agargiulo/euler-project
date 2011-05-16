@@ -27,7 +27,6 @@ public class Problem48
             sum = sum.add(number.pow(i));
         }
         String sumStr = sum.toString();
-        System.out.println(sumStr.substring(sumStr.length() - 10, sumStr
-                .length()));
+        System.out.println(sumStr.substring(sumStr.length() - 10));
     }
 }
