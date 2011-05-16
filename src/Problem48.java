@@ -2,7 +2,7 @@ import java.math.BigInteger;
 
 /**
  * @author Anthony Gargiulo
- * @version 0.5
+ * @version 1.0
  *          Euler Project
  *          Problem 48
  *          ---------
