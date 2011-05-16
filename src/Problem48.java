@@ -1,6 +1,8 @@
+import java.math.BigInteger;
+
 /**
  * @author Anthony Gargiulo
- * @version 0.1
+ * @version 0.5
  *          Euler Project
  *          Problem 48
  *          ---------
@@ -17,7 +19,15 @@ public class Problem48
      */
     public static void main(String[] args)
     {
-
+        BigInteger number;
+        BigInteger sum = BigInteger.ZERO;
+        for (int i = 1; i <= 1000; i++)
+        {
+            number = BigInteger.valueOf(i);
+            sum = sum.add(number.pow(i));
+        }
+        String sumStr = sum.toString();
+        System.out.println(sumStr.substring(sumStr.length() - 10, sumStr
+                .length()));
     }
-
 }
