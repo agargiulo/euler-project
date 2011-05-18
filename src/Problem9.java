@@ -21,32 +21,12 @@ public class Problem9
      */
     public static void main(String[] args)
     {
-        int upperBound = 100;
-        int a = 2;
-        int b = 1;
-        while (true)
+        final int SUM = 1000;
+        int a = 1;
+        int b = 2;
+        int c = (int) Math.sqrt(a * a + b * b);
+        while (a + b + c != SUM)
         {
-            double c = Math.sqrt(a * a + b * b);
-            if (c != (int) c)
-            {
-                b++;
-                if (b + 1 == a)
-                {
-                    continue;
-                } else
-                {
-                    b = 1;
-                    a++;
-                    if (a == upperBound)
-                    {
-                        break;
-                    }
-                }
-            } else
-            {
-                System.out.println(String.format("a: %s | b: %s | c: %s", a, b,
-                        Math.sqrt(a * a + b * b)));
-            }
         }
     }
 }
