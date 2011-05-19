@@ -41,7 +41,7 @@ public class Problem22
             return;
         }
         ArrayList<String> nameList = new ArrayList<String>(6000);
-        while (in.hasNext())
+        while (in.hasNextLine())
         {
             nameList.add(in.nextLine());
         }
