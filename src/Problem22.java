@@ -1,11 +1,12 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 /**
  * @author Anthony Gargiulo
- * @version 0.1
+ * @version 1.0
  *          Euler Project
  *          Problem 22
  *          ---------
@@ -25,14 +26,16 @@ public class Problem22
 
     /**
      * @param args
+     * @throws FileNotFoundException
      */
-    public static void main(String[] args)
+    public static void main(String[] args) throws FileNotFoundException
     {
         File names = new File("names.txt");
         Scanner in;
         try
         {
             in = new Scanner(names);
+            in.useDelimiter(",");
         } catch (FileNotFoundException e)
         {
             System.err
@@ -41,14 +44,21 @@ public class Problem22
             return;
         }
         ArrayList<String> nameList = new ArrayList<String>(6000);
-        while (in.hasNextLine())
+        while (in.hasNext())
         {
-            nameList.add(in.nextLine());
+            String name = in.next();
+            name = name.substring(1, name.length() - 1);
+            if (!name.trim().equals(""))
+            {
+                nameList.add(name);
+            }
         }
+        Collections.sort(nameList);
         long sum = 0;
         for (int i = 0; i < nameList.size(); i++)
         {
-            sum += calcNameScore(nameList.get(i), i + 1);
+            long score = calcNameScore(nameList.get(i), i + 1);
+            sum += score;
         }
         System.out.println("Sum: " + sum);
     }
