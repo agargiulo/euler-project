@@ -39,7 +39,7 @@ public class Problem56
 
     /**
      * @param number
-     * @return
+     * @return the sum of the digits of the given BigInteger
      */
     private static BigInteger sumDigits(BigInteger number)
     {
