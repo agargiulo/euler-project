@@ -13,7 +13,7 @@ import java.math.BigInteger;
  *          Find the sum of the digits in the number 100!
  */
 
-public class Problem20
+public class Problem020
 {
 
     /**

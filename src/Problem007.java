@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *          What is the 10001st prime number?
  */
 
-public class Problem7
+public class Problem007
 {
 
     /**

@@ -15,7 +15,7 @@ import java.util.ArrayList;
  *          exceed four million, find the sum of the even-valued terms.
  */
 
-public class Problem2
+public class Problem002
 {
 
     /**

@@ -10,7 +10,7 @@ import java.util.ArrayList;
  *          Find the sum of all the primes below two million.
  */
 
-public class Problem10
+public class Problem010
 {
 
     /**

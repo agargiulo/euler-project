@@ -22,7 +22,7 @@ import java.util.ArrayList;
  *          million.
  */
 
-public class Problem14
+public class Problem014
 {
 
     /**

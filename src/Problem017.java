@@ -15,7 +15,7 @@
  *          numbers is in compliance with British usage.
  */
 
-public class Problem17
+public class Problem017
 {
 
     /**

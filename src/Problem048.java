@@ -11,7 +11,7 @@ import java.math.BigInteger;
  *          1000^1000.
  */
 
-public class Problem48
+public class Problem048
 {
 
     /**

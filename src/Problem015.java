@@ -9,7 +9,7 @@
  *          How many routes are there through a 20×20 grid?
  */
 
-public class Problem15
+public class Problem015
 {
 
     /**

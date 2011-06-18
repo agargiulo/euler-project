@@ -21,7 +21,7 @@ import java.util.Scanner;
  *          What is the total of all the name scores in the file?
  */
 
-public class Problem22
+public class Problem022
 {
 
     /**

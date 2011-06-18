@@ -13,7 +13,7 @@
  *          Find the product abc.
  */
 
-public class Problem9
+public class Problem009
 {
 
     /**

@@ -110,7 +110,7 @@ import java.math.BigInteger;
  *          53503534226472524250874054075591789781264330331690
  */
 
-public class Problem13
+public class Problem013
 {
 
     /**

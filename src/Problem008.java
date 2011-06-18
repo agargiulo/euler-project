@@ -28,7 +28,7 @@
  *          71636269561882670428252483600823257530420752963450
  */
 
-public class Problem8
+public class Problem008
 {
 
     /**

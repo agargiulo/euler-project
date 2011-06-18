@@ -11,7 +11,7 @@
  *          numbers.
  */
 
-public class Problem4
+public class Problem004
 {
 
     /**

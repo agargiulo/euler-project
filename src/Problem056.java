@@ -14,7 +14,7 @@ import java.math.BigInteger;
  *          is the maximum digital sum?
  */
 
-public class Problem56
+public class Problem056
 {
 
     /**

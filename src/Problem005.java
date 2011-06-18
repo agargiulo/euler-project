@@ -12,7 +12,7 @@
  *          numbers from 1 to 20?
  */
 
-public class Problem5
+public class Problem005
 {
 
     /**

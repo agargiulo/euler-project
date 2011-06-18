@@ -24,7 +24,7 @@ import java.util.TreeSet;
  *          hundred divisors?
  */
 
-public class Problem12
+public class Problem012
 {
     /**
      * the current triangle number

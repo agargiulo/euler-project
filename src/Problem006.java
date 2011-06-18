@@ -15,7 +15,7 @@
  *          natural numbers and the square of the sum.
  */
 
-public class Problem6
+public class Problem006
 {
 
     /**
