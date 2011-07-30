@@ -2,7 +2,7 @@
  * @author Anthony Gargiulo
  * @version 0.1
  *          Euler Project
- *          Problem s15
+ *          Problem 15
  *          ---------
  *          Starting in the top left corner of a 2x2 grid, there are 6 routes
  *          (without backtracking) to the bottom right corner.

@@ -1,8 +1,9 @@
 import java.util.ArrayList;
 
 /**
+ * **SOLVED**
  * @author Anthony Gargiulo
- * @version 1
+ * @version 1.0
  *          Euler Project
  *          Problem 2
  *          ---------

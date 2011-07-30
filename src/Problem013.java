@@ -1,8 +1,9 @@
 import java.math.BigInteger;
 
 /**
+ * **SOLVED**
  * @author Anthony Gargiulo
- * @version 0.1
+ * @version 1.0
  *          Euler Project
  *          Problem 13
  *          ---------

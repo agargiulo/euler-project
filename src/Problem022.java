@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.Scanner;
 
 /**
+ * **SOLVED**
  * @author Anthony Gargiulo
  * @version 1.0
  *          Euler Project
