@@ -21,12 +21,14 @@ public class Problem009
      */
     public static void main(String[] args)
     {
-        final int SUM = 1000;
-        int a = 1;
-        int b = 2;
-        int c = (int) Math.sqrt(a * a + b * b);
-        while (a + b + c != SUM)
+        final long SUM = 1000;
+        long a, b, c;
+        for (long n = 3; n < 35; n += 2)
         {
+            a = n;
+            c = (a * a + 1)/2;
+            b = c - 1;
+            System.out.println("a: " + a + "\t|\tb: " + b + "\t|\tc: " + c + "\t|\tSum: " + (a+b+c));
         }
     }
 }
