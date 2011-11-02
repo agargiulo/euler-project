@@ -1,4 +1,3 @@
+bin/
 bin/*
 *.class
-*.o
-a.out
