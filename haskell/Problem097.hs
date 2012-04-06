@@ -1,2 +1,1 @@
-result = show (28433*2^7830457 +1)
-problem097 = drop ((length result) -10) (result)
+problem097 = (28433*2^7830457 +1 ) `mod` 10000000000
