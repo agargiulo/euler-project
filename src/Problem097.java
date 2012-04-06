@@ -1,7 +1,7 @@
 import java.math.BigInteger;
 
 /**
- * File: Problem091.java
+ * File: Problem097.java
  * Date created: Apr 6, 2012
  * 
  * @author Anthony Gargiulo
@@ -23,7 +23,7 @@ import java.math.BigInteger;
  *          Find the last ten digits of this prime number.
  * 
  */
-public class Problem091
+public class Problem097
 {
 
 	/**
