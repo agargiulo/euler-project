@@ -32,10 +32,11 @@ public class Problem091
 	public static void main(String[] args)
 	{
 		BigInteger number = BigInteger.valueOf(2L);
-		number.pow(7830457);
-		number.multiply(BigInteger.valueOf(28433L));
-		number.add(BigInteger.valueOf(1L));
+		number = number.pow(7830457);
+		number = number.multiply(BigInteger.valueOf(28433L));
+		number = number.add(BigInteger.ONE);
 		String result = number.toString();
+		System.out.println(result.length());
 		System.out.println(result.substring(result.length() - 11));
 	}
 
