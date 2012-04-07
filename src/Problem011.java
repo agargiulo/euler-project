@@ -47,12 +47,14 @@ public class Problem011
 		int maxProduct = 0;
 		for (int[] element : grid)
 		{
-			for (int c = 0; c < element.length - 4; c++)
+			for (int c = 0; c < element.length - 3; c++)
 			{
 				for (int i = c; i < c + 4; i++)
 				{
+					// System.out.println("r: " + r + " c: " + i);
 					product *= element[i];
 				}
+				// System.out.println("H Product = " + product);
 				maxProduct = Math.max(product, maxProduct);
 				product = 1;
 			}
@@ -64,14 +66,19 @@ public class Problem011
 	{
 		int product = 1;
 		int maxProduct = 0;
-		for (int r = 0; r < grid.length - 4; r++)
+		for (int r = 0; r < grid.length - 3; r++)
 		{
-			for (int c = 0; c < grid[r].length - 4; c++)
+			for (int c = 0; c < grid[r].length - 3; c++)
 			{
+				// System.out.println("r: " + r + " c: " + c);
 				product *= grid[r][c];
+				// System.out.println("r: " + (r + 1) + " c: " + (c + 1));
 				product *= grid[r + 1][c + 1];
+				// System.out.println("r: " + (r + 2) + " c: " + (c + 2));
 				product *= grid[r + 2][c + 2];
+				// System.out.println("r: " + (r + 3) + " c: " + (c + 3));
 				product *= grid[r + 3][c + 3];
+				// System.out.println("LD Product = " + product);
 				maxProduct = Math.max(product, maxProduct);
 				product = 1;
 			}
@@ -83,14 +90,19 @@ public class Problem011
 	{
 		int product = 1;
 		int maxProduct = 0;
-		for (int r = grid.length - 1; r > 4; r--)
+		for (int r = grid.length - 1; r > 2; r--)
 		{
-			for (int c = grid[r].length - 1; c > 4; c--)
+			for (int c = grid[r].length - 1; c > 2; c--)
 			{
+				// System.out.println("r: " + r + " c: " + c);
 				product *= grid[r][c];
+				// System.out.println("r: " + (r - 1) + " c: " + (c - 1));
 				product *= grid[r - 1][c - 1];
+				// System.out.println("r: " + (r - 2) + " c: " + (c - 2));
 				product *= grid[r - 2][c - 2];
+				// System.out.println("r: " + (r - 3) + " c: " + (c - 3));
 				product *= grid[r - 3][c - 3];
+				// System.out.println("RD Product = " + product);
 				maxProduct = Math.max(product, maxProduct);
 				product = 1;
 			}
@@ -104,12 +116,14 @@ public class Problem011
 		int maxProduct = 0;
 		for (int c = 0; c < grid[0].length; c++)
 		{
-			for (int r = 0; r < grid[c].length - 4; r++)
+			for (int r = 0; r < grid.length - 3; r++)
 			{
 				for (int i = r; i < r + 4; i++)
 				{
+					// System.out.println("r: " + i + " c: " + c);
 					product *= grid[i][c];
 				}
+				// System.out.println("V Product = " + product);
 				maxProduct = Math.max(product, maxProduct);
 				product = 1;
 			}
@@ -146,16 +160,12 @@ public class Problem011
 		{1,70,54,71,83,51,54,69,16,92,33,48,61,43,52,1,89,19,67,48}};
 
 		int maxHorProd = getMaxHorProd(grid);
-
 		int maxVertProd = getMaxVertProd(grid);
-
 		int maxLeftDiagProd = getMaxLeftDiagProd(grid);
-
 		int maxRightDiagProd = getMaxRightDiagProd(grid);
-
 		int maxProduct = Math.max(Math.max(maxVertProd, maxHorProd),
 				Math.max(maxLeftDiagProd, maxRightDiagProd));
-
-		System.out.println(maxProduct);
+		System.out.println(maxHorProd + " " + maxVertProd + " "
+				+ maxLeftDiagProd + " " + maxRightDiagProd + " " + maxProduct);
 	}
 }
