@@ -43,6 +43,11 @@
 public class Problem011
 {
 
+	/**
+	 * 
+	 * @param grid
+	 * @return the max product in the rows
+	 */
 	private static int getMaxHorProd(int[][] grid)
 	{
 		int product = 1;
@@ -72,7 +77,7 @@ public class Problem011
 	 * diagonal that is NW -> SE
 	 * 
 	 * @param grid
-	 * @return
+	 * @return the max product along one diagonal
 	 */
 	private static int getMaxLeftDiagProd(int[][] grid)
 	{
@@ -97,7 +102,7 @@ public class Problem011
 	 * diagonal that is NE -> SW
 	 * 
 	 * @param grid
-	 * @return
+	 * @return the max product along one diagonal
 	 */
 	private static int getMaxRightDiagProd(int[][] grid)
 	{
@@ -118,6 +123,11 @@ public class Problem011
 		return maxProduct;
 	}
 
+	/**
+	 * 
+	 * @param grid
+	 * @return the max product in the columns
+	 */
 	private static int getMaxVertProd(int[][] grid)
 	{
 		int product = 1;
