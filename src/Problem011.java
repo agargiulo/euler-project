@@ -6,8 +6,10 @@
  */
 
 /**
+ * **SOLVED**
+ * 
  * @author Anthony Gargiulo
- * @version 0.1
+ * @version 1.0
  * 
  *          In the 20*20 grid below, four numbers along a diagonal line have
  *          been marked in red.
@@ -47,13 +49,17 @@ public class Problem011
 		int maxProduct = 0;
 		for (int[] element : grid)
 		{
-			for (int c = 0; c < element.length - 3; c++)
+			for (int c = 0; c <= element.length - 4; c++)
 			{
-				for (int i = c; i < c + 4; i++)
-				{
-					// System.out.println("r: " + r + " c: " + i);
-					product *= element[i];
-				}
+				// for (int i = c; i < c + 4; i++)
+				// {
+				// // System.out.println("r: " + r + " c: " + i);
+				// product *= element[i];
+				// }
+				product *= element[c];
+				product *= element[c + 1];
+				product *= element[c + 2];
+				product *= element[c + 3];
 				// System.out.println("H Product = " + product);
 				maxProduct = Math.max(product, maxProduct);
 				product = 1;
@@ -62,23 +68,24 @@ public class Problem011
 		return maxProduct;
 	}
 
+	/**
+	 * diagonal that is NW -> SE
+	 * 
+	 * @param grid
+	 * @return
+	 */
 	private static int getMaxLeftDiagProd(int[][] grid)
 	{
 		int product = 1;
 		int maxProduct = 0;
-		for (int r = 0; r < grid.length - 3; r++)
+		for (int r = 0; r <= grid.length - 4; r++)
 		{
-			for (int c = 0; c < grid[r].length - 3; c++)
+			for (int c = 0; c <= grid[r].length - 4; c++)
 			{
-				// System.out.println("r: " + r + " c: " + c);
 				product *= grid[r][c];
-				// System.out.println("r: " + (r + 1) + " c: " + (c + 1));
 				product *= grid[r + 1][c + 1];
-				// System.out.println("r: " + (r + 2) + " c: " + (c + 2));
 				product *= grid[r + 2][c + 2];
-				// System.out.println("r: " + (r + 3) + " c: " + (c + 3));
 				product *= grid[r + 3][c + 3];
-				// System.out.println("LD Product = " + product);
 				maxProduct = Math.max(product, maxProduct);
 				product = 1;
 			}
@@ -86,23 +93,24 @@ public class Problem011
 		return maxProduct;
 	}
 
+	/**
+	 * diagonal that is NE -> SW
+	 * 
+	 * @param grid
+	 * @return
+	 */
 	private static int getMaxRightDiagProd(int[][] grid)
 	{
 		int product = 1;
 		int maxProduct = 0;
-		for (int r = grid.length - 1; r > 2; r--)
+		for (int r = 3; r <= grid.length - 1; r++)
 		{
-			for (int c = grid[r].length - 1; c > 2; c--)
+			for (int c = 0; c <= grid[r].length - 4; c++)
 			{
-				// System.out.println("r: " + r + " c: " + c);
 				product *= grid[r][c];
-				// System.out.println("r: " + (r - 1) + " c: " + (c - 1));
-				product *= grid[r - 1][c - 1];
-				// System.out.println("r: " + (r - 2) + " c: " + (c - 2));
-				product *= grid[r - 2][c - 2];
-				// System.out.println("r: " + (r - 3) + " c: " + (c - 3));
-				product *= grid[r - 3][c - 3];
-				// System.out.println("RD Product = " + product);
+				product *= grid[r - 1][c + 1];
+				product *= grid[r - 2][c + 2];
+				product *= grid[r - 3][c + 3];
 				maxProduct = Math.max(product, maxProduct);
 				product = 1;
 			}
@@ -118,11 +126,15 @@ public class Problem011
 		{
 			for (int r = 0; r < grid.length - 3; r++)
 			{
-				for (int i = r; i < r + 4; i++)
-				{
-					// System.out.println("r: " + i + " c: " + c);
-					product *= grid[i][c];
-				}
+				// for (int i = r; i < r + 4; i++)
+				// {
+				// // System.out.println("r: " + i + " c: " + c);
+				// product *= grid[i][c];
+				// }
+				product *= grid[r][c];
+				product *= grid[r + 1][c];
+				product *= grid[r + 2][c];
+				product *= grid[r + 3][c];
 				// System.out.println("V Product = " + product);
 				maxProduct = Math.max(product, maxProduct);
 				product = 1;
@@ -163,9 +175,10 @@ public class Problem011
 		int maxVertProd = getMaxVertProd(grid);
 		int maxLeftDiagProd = getMaxLeftDiagProd(grid);
 		int maxRightDiagProd = getMaxRightDiagProd(grid);
+
 		int maxProduct = Math.max(Math.max(maxVertProd, maxHorProd),
 				Math.max(maxLeftDiagProd, maxRightDiagProd));
-		System.out.println(maxHorProd + " " + maxVertProd + " "
-				+ maxLeftDiagProd + " " + maxRightDiagProd + " " + maxProduct);
+
+		System.out.println(maxProduct);
 	}
 }
