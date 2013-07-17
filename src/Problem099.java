@@ -86,6 +86,7 @@ public class Problem099
 
 		Calendar cal2 = Calendar.getInstance();
 		System.out.println("Ended at: " + dateFormat.format(cal2.getTime()));
+		in.close();
 
 	}
 }

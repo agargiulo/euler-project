@@ -67,6 +67,7 @@ public class Problem022
 				nameList.add(name);
 			}
 		}
+		in.close();
 		Collections.sort(nameList);
 		long sum = 0;
 		for (int i = 0; i < nameList.size(); i++)
