@@ -73,13 +73,9 @@ public class Problem024
 		{0,1,2,3,4,5,6,7,8,9};
 		getPermutations(digits, 0);
 		Collections.sort(permutations);
-		System.out.println("number of permutations: " + permutations.size());
-		System.out.println(permutations);
-		/*
-		 * System.out
-		 * .print("The millionth lexicographic permutation of 0123456789 is ");
-		 * System.out.println(permutations.get(999999));
-		 */
+		System.out
+				.print("The millionth lexicographic permutation of 0123456789 is ");
+		System.out.println(permutations.get(999999));
 	}
 
 }
