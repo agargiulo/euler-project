@@ -1,3 +1,4 @@
+package com.agargiulo.code.projecteuler;
 import java.util.ArrayList;
 import java.util.Collections;
 
